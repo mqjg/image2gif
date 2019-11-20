@@ -15,3 +15,6 @@ This will look on the desktop for a directory named "pics". It will save a file 
 
 This script has imageio as a dependancy. You can install it by opening a console and writing: pip install imageio.
 It also uses sys, os, and but I beleive they are all standard modules. 
+
+Known issues:
+1. The paths to the pictures uses os.listdir(). This means that if non-image files are in the directory specified to the -r flag the program will crash! Also, os.listdir() does not guarantee a specifc order to the file names so the gif might not be in order.
